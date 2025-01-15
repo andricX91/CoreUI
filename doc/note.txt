@@ -1,0 +1,8 @@
+Requirements:
+
+================
+Generate library
+================
+Start next command:
+npx nx g @nx/angular:library libs/auto-form
+---------------------------------------------------------------------------------------------------
