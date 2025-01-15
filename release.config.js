@@ -3,6 +3,7 @@ module.exports = {
   preset: 'conventionalcommits',
   presetConfig: {
     types: [
+      { type: 'RELEASE', section: 'Features' },
       { type: 'feat', section: 'Features' },
       { type: 'fix', section: 'Bug Fixes' },
       { type: 'chore', section: 'Chores' },
@@ -13,7 +14,10 @@ module.exports = {
       { type: 'test', hidden: true },
     ],
   },
-  releaseRules: [{ type: 'refactor', release: 'patch' }],
+  releaseRules: [
+    { type: 'refactor', release: 'patch' },
+    { type: 'RELEASE', release: 'patch' },
+  ],
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
@@ -26,7 +30,9 @@ module.exports = {
     [
       '@semantic-release/exec',
       {
-        prepareCmd: `VERSION=\${nextRelease.version} npx nx run-many -t release && VERSION=\${nextRelease.version} npx -p replace-json-property rjp ./package.json version \${nextRelease.version}`,
+        prepareCmd: isWindows
+          ? 'set VERSION=${nextRelease.version} && npx nx run-many -t release && set VERSION=${nextRelease.version} && npx -p replace-json-property rjp ./package.json version %VERSION%'
+          : 'VERSION=${nextRelease.version} npx nx run-many -t release && VERSION=${nextRelease.version} npx -p replace-json-property rjp ./package.json version ${nextRelease.version}',
       },
     ],
     [
