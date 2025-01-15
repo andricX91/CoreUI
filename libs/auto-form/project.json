@@ -8,6 +8,18 @@
   "targets": {
     "lint": {
       "executor": "@nx/eslint:lint"
+    },
+    "release": {
+      "executor": "nx-release:build-update-publish",
+      "options": {
+        "libName": "auto-form"
+      }
+    },
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "options": {
+        "project": "libs/auto-form/ng-package.json"
+      }
     }
   }
 }

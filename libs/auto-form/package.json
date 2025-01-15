@@ -1,0 +1,9 @@
+{
+  "name": "@core-ui/auto-form",
+  "version": "0.0.1",
+  "main": "./src/index.ts",
+  "dependencies": {},
+  "publishConfig": {
+    "access": "public"
+  }
+}
