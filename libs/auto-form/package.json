@@ -1,9 +1,16 @@
 {
   "name": "@core-ui/auto-form",
-  "version": "1.0.0 ",
-  "main": "./src/index.ts",
-  "dependencies": {},
+  "version": "1.0.0",
+  "main": "index.js",
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "description": "Auto Forms",
+  "keywords": [
+    "auto-form",
+    "angular",
+    "library"
+  ],
+  "author": "andric91",
+  "license": "MIT"
 }
