@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "build": "npx nx run-many --target=build --all",
-    "release-commit": "git add . && git commit -m \"RELEASE-$(git config user.name)-$(Get-Date -Format 'dd-MM-yy HH:mm')\"",
+    "release-commit": "powershell -Command \"git add .; git commit -m \\\"RELEASE-$(git config user.name)-$(Get-Date -Format 'dd-MM-yy HH:mm')\\\"\"",
     "release-configuration": "npx nx g nx-release:configure --installDependencies=true --generateReleaseConfig=true --generateGithubWorkflows=true --isPublic=true --no-interactive"
   },
   "private": true,
