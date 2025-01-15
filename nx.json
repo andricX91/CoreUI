@@ -62,9 +62,6 @@
     },
     "@nx/angular:component": {
       "style": "scss"
-    },
-    "nx-release:configure": {
-      "generateReleaseConfig": false
     }
   }
 }
