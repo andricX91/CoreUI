@@ -1,5 +1,3 @@
-const isWindows = process.platform === 'win32';
-
 module.exports = {
   branches: ['main'],
   preset: 'conventionalcommits',
@@ -32,9 +30,8 @@ module.exports = {
     [
       '@semantic-release/exec',
       {
-        prepareCmd: isWindows
-          ? 'set VERSION=${nextRelease.version} && npx nx run-many -t release && set VERSION=${nextRelease.version} && npx -p replace-json-property rjp ./package.json version %VERSION%'
-          : 'VERSION=${nextRelease.version} npx nx run-many -t release && VERSION=${nextRelease.version} npx -p replace-json-property rjp ./package.json version ${nextRelease.version}',
+        prepareCmd:
+          'set VERSION=${nextRelease.version} && npx nx run-many -t release && set VERSION=${nextRelease.version} && npx -p replace-json-property rjp ./package.json version %VERSION%',
       },
     ],
     [

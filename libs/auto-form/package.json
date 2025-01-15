@@ -1,6 +1,6 @@
 {
   "name": "@core-ui/auto-form",
-  "version": "0.0.1",
+  "version": "1.0.0 ",
   "main": "./src/index.ts",
   "dependencies": {},
   "publishConfig": {
