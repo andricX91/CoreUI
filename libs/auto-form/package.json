@@ -1,6 +1,6 @@
 {
   "name": "@core-web-ui/auto-form",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "main": "index.js",
   "publishConfig": {
     "access": "public"

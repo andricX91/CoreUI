@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 @NgModule({
-  imports: [CommonModule, AutoFormComponent],
+  declarations: [AutoFormComponent],
+  imports: [CommonModule],
+  exports: [AutoFormComponent],
   providers: [],
 })
 export class AutoFormModule {}
