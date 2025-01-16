@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "release": "npm run build && npm run release-configuration && npm run release-commit || npx semantic-release --no-ci",
+    "release": "npm run build && npm run release-configuration && npm run release-commit",
     "build": "npx nx run-many --target=build --all",
     "release-commit": "powershell -Command \"git add .; git commit -m \\\"RELEASE - $(git config user.name)-$(Get-Date -Format 'dd-MM-yy HH:mm')\\\"\" && git push",
     "release-configuration": "npx nx g nx-release:configure --installDependencies=true --generateReleaseConfig=false --generateGithubWorkflows=true --isPublic=true --projects=all --no-interactive"
