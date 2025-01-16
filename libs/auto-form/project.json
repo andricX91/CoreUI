@@ -2,7 +2,7 @@
   "name": "auto-form",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/auto-form/src",
-  "prefix": "lib",
+  "prefix": "core",
   "projectType": "library",
   "tags": [],
   "targets": {
