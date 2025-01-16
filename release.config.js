@@ -30,10 +30,7 @@ module.exports = {
     [
       '@semantic-release/exec',
       {
-        prepareCmd:
-          process.platform === 'win32'
-            ? 'set VERSION=${nextRelease.version} && npx nx run-many -t release && npx -p replace-json-property rjp ./libs/auto-form/package.json version %VERSION%'
-            : 'VERSION=${nextRelease.version} npx nx run-many -t release && npx -p replace-json-property rjp ./libs/auto-form/package.json version ${nextRelease.version}',
+        prepareCmd: `npx nx run-many --target=release --all && npx -p replace-json-property rjp ./package.json version \${nextRelease.version}`,
       },
     ],
     [
