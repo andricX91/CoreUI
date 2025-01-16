@@ -1,5 +1,5 @@
 {
-  "name": "@core-ui/auto-form",
+  "name": "@core-ui-base/auto-form",
   "version": "1.0.0",
   "main": "index.js",
   "publishConfig": {
