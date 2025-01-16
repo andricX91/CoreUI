@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'core-auto-form',
-  imports: [CommonModule],
   templateUrl: './auto-form.component.html',
   styleUrl: './auto-form.component.scss',
+  imports: [CommonModule],
 })
 export class AutoFormComponent {}
